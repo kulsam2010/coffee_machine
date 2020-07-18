@@ -1,4 +1,4 @@
-package coffeeMachine;
+package org.sameer.coffee.machine.enums;
 
 /**
  * Enum to hold the status of orders

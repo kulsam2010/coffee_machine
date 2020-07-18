@@ -1,7 +1,8 @@
-package coffeeMachine;
+package org.sameer.coffee.machine.pojo;
 
 import lombok.Builder;
 import lombok.Data;
+import org.sameer.coffee.machine.pojo.Beverage;
 
 import java.util.Map;
 

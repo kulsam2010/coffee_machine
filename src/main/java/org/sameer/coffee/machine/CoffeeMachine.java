@@ -1,9 +1,15 @@
-package coffeeMachine;
+package org.sameer.coffee.machine;
 
-import coffeeMachine.Exceptions.IngredientsNotAvailableException;
-import coffeeMachine.Exceptions.InvalidBeverageException;
 import lombok.Builder;
 import lombok.Data;
+import org.sameer.coffee.machine.Utils.Constants;
+import org.sameer.coffee.machine.Utils.Worker;
+import org.sameer.coffee.machine.enums.OrderStatus;
+import org.sameer.coffee.machine.exceptions.IngredientsNotAvailableException;
+import org.sameer.coffee.machine.exceptions.InvalidBeverageException;
+import org.sameer.coffee.machine.pojo.Beverage;
+import org.sameer.coffee.machine.pojo.Inventory;
+import org.sameer.coffee.machine.pojo.Order;
 
 import java.sql.Timestamp;
 import java.util.Map;
@@ -69,6 +75,11 @@ public class CoffeeMachine {
 
     }
 
+    /**
+     * Checks if machine has sufficient inventory to make the beverage
+     * @param beverage
+     * @return
+     */
     private boolean isMakeable(Beverage beverage){
         Map<String, Integer> inventoryMap = inventory.getInventoryMap();
         Map<String, Integer> recipe = beverage.getRecipe();
@@ -83,6 +94,10 @@ public class CoffeeMachine {
 
     }
 
+    /**
+     * Gets any available free tap
+     * @return
+     */
     private Integer getFreeTap(){
         for (Map.Entry<Integer, Boolean> entry : tapMap.entrySet()) {
             if(entry.getValue() != null && entry.getValue()) {

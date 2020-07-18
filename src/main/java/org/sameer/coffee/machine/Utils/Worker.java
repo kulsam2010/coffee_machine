@@ -1,6 +1,8 @@
-package coffeeMachine;
+package org.sameer.coffee.machine.Utils;
 
 import lombok.AllArgsConstructor;
+import org.sameer.coffee.machine.enums.OrderStatus;
+import org.sameer.coffee.machine.pojo.Order;
 
 import java.sql.Timestamp;
 import java.util.Map;

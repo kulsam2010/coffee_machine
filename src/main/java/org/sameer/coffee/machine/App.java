@@ -1,11 +1,16 @@
-package coffeeMachine;
+package org.sameer.coffee.machine;
 
-import coffeeMachine.Exceptions.IngredientsNotAvailableException;
-import coffeeMachine.Exceptions.InvalidBeverageException;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.sameer.coffee.machine.Utils.Constants;
+import org.sameer.coffee.machine.enums.OrderStatus;
+import org.sameer.coffee.machine.exceptions.IngredientsNotAvailableException;
+import org.sameer.coffee.machine.exceptions.InvalidBeverageException;
+import org.sameer.coffee.machine.pojo.Beverage;
+import org.sameer.coffee.machine.pojo.Inventory;
+import org.sameer.coffee.machine.pojo.Order;
 
 import java.sql.Timestamp;
 import java.util.*;

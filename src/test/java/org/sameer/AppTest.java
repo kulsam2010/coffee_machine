@@ -1,7 +1,10 @@
-package coffeeMachine;
+package org.sameer;
 
 import org.junit.Assert;
 import org.junit.Test;
+import org.sameer.coffee.machine.App;
+import org.sameer.coffee.machine.pojo.Order;
+import org.sameer.coffee.machine.enums.OrderStatus;
 
 import java.util.Arrays;
 import java.util.Map;
