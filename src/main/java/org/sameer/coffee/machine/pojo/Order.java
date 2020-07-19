@@ -18,4 +18,5 @@ public class Order {
     private String beverage;
     private Timestamp startTime;
     private Timestamp endTime;
+    private boolean hasWaitedForOtherOrders;
 }
